@@ -1,48 +1,68 @@
-<div align="center">
-</div>
+# my-portfolio
 
+Personal portfolio website for [Barnik Bhattacharyya](https://barnikbh.com), built with Next.js, deployed on Vercel.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## Features
 
-# Features
+- Single config file — edit [`src/data/resume.tsx`](./src/data/resume.tsx) to update all content
+- MDX blog and work case studies with syntax highlighting
+- Dynamic OG images auto-generated for every page
+- Blog search — filter posts by title in real time
+- Contact form with email delivery via Resend
+- Sitemap, robots.txt, and JSON-LD schema for SEO
+- Reading time estimate on all posts
+- Dark / light mode toggle
+- Vercel Analytics
+- Responsive, mobile-first layout
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Stack
 
-# Getting Started Locally
+- [Next.js 14](https://nextjs.org/) — App Router, Server Actions, Static Generation
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/) + [Shadcn/UI](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/) + [Magic UI](https://magicui.design/)
+- [Resend](https://resend.com/) — contact form email delivery
+- [Vercel](https://vercel.com/) — hosting and analytics
 
-1. Clone this repository to your local machine:
+## Getting Started
 
-   ```bash
-   git clone https://github.com/barnikbh/portfolio2
-   ```
+### 1. Clone the repo
 
-2. Move to the cloned directory
+```bash
+git clone https://github.com/barnikbh/my-portfolio
+cd my-portfolio
+```
 
-   ```bash
-   cd portfolio
-   ```
+### 2. Install dependencies
 
-3. Install dependencies:
+```bash
+pnpm install
+```
 
-   ```bash
-   pnpm install
-   ```
+### 3. Set up environment variables
 
-4. Start the local Server:
+Create a `.env.local` file in the root:
 
-   ```bash
-   pnpm dev
-   ```
+```bash
+RESEND_API_KEY=re_your_api_key_here
+```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+Get a free API key at [resend.com](https://resend.com).
 
+### 4. Start the dev server
 
-Update github
+```bash
+pnpm dev
+```
 
-git add .
-git commit -m "message"
-git push origin main
+Open [http://localhost:3000](http://localhost:3000).
+
+### 5. Customize your content
+
+Edit [`src/data/resume.tsx`](./src/data/resume.tsx) — this is the single source of truth for your name, bio, work experience, education, skills, projects, and social links.
+
+Add blog/work posts as `.mdx` files in the [`content/`](./content/) directory.
+
+## Deployment
+
+Deploy to Vercel with one click. Make sure to add `RESEND_API_KEY` as an environment variable in your Vercel project settings before deploying.
