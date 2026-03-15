@@ -41,10 +41,13 @@ export async function getPost(slug: string) {
   let source = fs.readFileSync(filePath, "utf-8");
   const { content: rawContent, data: metadata } = matter(source);
   const content = await markdownToHTML(rawContent);
+  const wordCount = rawContent.trim().split(/\s+/).length;
+  const readingTime = Math.ceil(wordCount / 200);
   return {
     source: content,
     metadata,
     slug,
+    readingTime,
   };
 }
 

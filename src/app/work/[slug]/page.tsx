@@ -2,6 +2,7 @@ import { getWorkPosts, getWork } from "@/data/work";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
@@ -88,6 +89,12 @@ export default async function Blog({
           }),
         }}
       />
+      <Link
+        href="/work"
+        className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-6 inline-block"
+      >
+        ← Back to work
+      </Link>
       <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
         {post.metadata.title}
       </h1>
@@ -97,6 +104,9 @@ export default async function Blog({
             {formatDate(post.metadata.publishedAt)}
           </p>
         </Suspense>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          {post.readingTime} min read
+        </p>
       </div>
       <article
         className="prose dark:prose-invert"
