@@ -8,9 +8,9 @@ export const DATA = {
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/newdelhi",
   description:
-    "At work, I'm an engineer turned PM. At play I'm a scuba diver.",
+    "I build AI products at the enterprise frontier. At play, I'm a scuba diver.",
   summary:
-   "I grew up watching my dad design computers, which ignited a lifelong passion for understanding and building software. That curiosity led me to [engineering](/#education), [hackathons](/#hackathons), and the thrill of building impactful software at incredible [early-stage B2B SaaS startups](/#work).",
+    "I grew up watching my dad design computers — it lit a lifelong obsession with understanding and building software. That curiosity took me through engineering, hackathons, and eventually into product management at some of the most exciting early-stage B2B AI startups in India and the Middle East.\n\nOver the last 6 years, I've worked at the frontier of enterprise AI — scaling [Voice Contact Center AI](https://fundamento.ai) from zero to $1.5M ARR and 5 million monthly conversations, leading platform strategy at [LiaPlus AI](https://liaplus.com), and now building autonomous workspace intelligence at [Omnissa](https://omnissa.com). I sit at the intersection of deep technical understanding and product strategy — I can spec, prototype, and ship, not just manage.",
   avatarUrl: "/me_2026.jpeg",
   skills: [
     "Python",
@@ -38,6 +38,60 @@ export const DATA = {
     "SDLC",
     "Jira",
     "Figma",
+  ],
+  skillGroups: [
+    {
+      label: "AI & Machine Learning",
+      skills: ["LLM", "Prompt Engineering", "LangChain", "Vector Database", "Semantic Search", "Speech-to-Text / TTS", "MLOps"],
+    },
+    {
+      label: "Product",
+      skills: ["Product Roadmap", "0→1 Building", "Rapid Prototyping", "Design Thinking", "Agile / Scrum", "Go-to-Market", "Data Analytics"],
+    },
+    {
+      label: "Technical",
+      skills: ["Python", "JavaScript", "System Design", "API Design", "VoIP / WebRTC", "Figma"],
+    },
+  ],
+  currently: [
+    { label: "Building", value: "Autonomous workspace AI at Omnissa" },
+    { label: "Side projects", value: "Tax filing tool + personal finance dashboard" },
+    { label: "Reading", value: "The God Delusion — Richard Dawkins" },
+    { label: "Experimenting with", value: "Claude Code agents for personal tooling" },
+  ],
+  sideProjects: [
+    {
+      title: "Finance Dashboard",
+      description: "Personal finance tracker with AES encryption, hosted on Fly.io",
+      href: "https://accounts.barnikbh.com",
+      icon: "💰",
+      status: "live" as const,
+      hasDemo: true,
+    },
+    {
+      title: "Indian Tax Filing Simplified",
+      description: "A tool to make ITR filing less painful for Indian individuals",
+      href: null,
+      icon: "🧾",
+      status: "coming-soon" as const,
+      hasDemo: false,
+    },
+    {
+      title: "Blog Writing Agent",
+      description: "AI agent that converts weekly notes into Medium blog drafts",
+      href: "https://github.com/barnikbh/blog-writing-agent",
+      icon: "📝",
+      status: "live" as const,
+      hasDemo: false,
+    },
+    {
+      title: "Digital Will",
+      description: "Dead man's switch that transmits asset info to beneficiaries",
+      href: "https://github.com/barnikbh/digital-will",
+      icon: "📋",
+      status: "live" as const,
+      hasDemo: false,
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -89,7 +143,7 @@ export const DATA = {
       start: "August 2025",
       end: "Present",
       description:
-        "Building the future of autonomous workspace by building AI across DEX, UEM & Horizon.",  
+        "Leading AI product strategy across DEX, UEM & Horizon — building autonomous workspace experiences that reduce IT operational overhead through intelligent automation and proactive remediation.",
     },
     {
       company: "LiaPlus AI",
@@ -161,7 +215,7 @@ export const DATA = {
       start: "February 2019",
       end: "September 2019",
       description:
-        "Reported to the Chief Product Officer at Engati, learned product management.",
+        "Learned the craft of product management under the CPO at one of India's leading chatbot platforms.",
     },
   ],
   education: [
