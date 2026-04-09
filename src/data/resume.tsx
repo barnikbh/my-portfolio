@@ -70,10 +70,10 @@ export const DATA = {
     },
     {
       title: "Indian Tax Filing Simplified",
-      description: "A tool to make ITR filing less painful for Indian individuals",
-      href: null,
+      description: "Tax savings made easy, intuitive, and free — for anyone, anywhere",
+      href: "https://planmytax.org",
       icon: "🧾",
-      status: "coming-soon" as const,
+      status: "live" as const,
       hasDemo: false,
     },
     {
