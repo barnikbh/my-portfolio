@@ -65,7 +65,7 @@ export const DATA = {
       description: "Personal finance tracker with AES encryption, hosted on Fly.io",
       href: "https://accounts.barnikbh.com",
       icon: "💰",
-      status: "live" as const,
+      status: "live" as "live" | "coming-soon",
       hasDemo: true,
     },
     {
