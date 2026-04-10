@@ -7,6 +7,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { FinanceDemoModal } from "@/components/finance-demo-modal";
+import { BookshelfCard } from "@/components/bookshelf-card";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -57,14 +58,22 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
           <h2 className="text-xl font-bold mb-3">Currently</h2>
           <div className="grid grid-cols-2 gap-2">
-            {DATA.currently.map((item) => (
-              <div key={item.label} className="rounded-xl border p-3">
-                <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground mb-1">
-                  {item.label}
+            {DATA.currently.map((item) =>
+              item.label === "Reading" ? (
+                <BookshelfCard
+                  key={item.label}
+                  currentBook={item.value}
+                  books={DATA.booksRead}
+                />
+              ) : (
+                <div key={item.label} className="rounded-xl border p-3">
+                  <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground mb-1">
+                    {item.label}
+                  </div>
+                  <div className="text-sm font-medium">{item.value}</div>
                 </div>
-                <div className="text-sm font-medium">{item.value}</div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </BlurFade>
       </section>
