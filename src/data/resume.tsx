@@ -56,10 +56,11 @@ export const DATA = {
   currently: [
     { label: "Building", value: "Autonomous workspace AI at Omnissa" },
     { label: "Side projects", value: "Tax filing tool + personal finance dashboard" },
-    { label: "Reading", value: "The God Delusion — Richard Dawkins" },
+    { label: "Reading", value: "" },
     { label: "Experimenting with", value: "Claude Code agents for personal tooling" },
   ],
   booksRead: [
+    { title: "The God Delusion", author: "Richard Dawkins", year: "2026" },
     { title: "The Tyranny of Merit", author: "Michael Sandel", year: "2025" },
     { title: "Justice", author: "Michael Sandel", year: "2025" },
     { title: "Democracy on the Road", author: "Ruchir Sharma", year: "2025" },
@@ -274,166 +275,89 @@ export const DATA = {
       end: "2019",
     },
   ],
-  projects: [
+  blogs: [
     {
       title: "Observability in Agentic Systems",
       href: "https://medium.com/@barnikbh/observability-in-agentic-systems-you-dont-know-what-your-agents-are-doing-c253cf31d94a",
       dates: "Apr 2026",
-      active: true,
       description:
         "The worst failure in an agentic system isn't a crash — it's silence. A breakdown of the three hardest things to observe in multi-agent pipelines and a practical framework to fix it.",
       technologies: ["Agentic AI", "Observability", "LLMOps", "OpenTelemetry", "System Design"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/observability-in-agentic-systems-you-dont-know-what-your-agents-are-doing-c253cf31d94a",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-3.svg",
-      video: "",
     },
     {
       title: "RBAC in Agentic Systems",
       href: "https://medium.com/@barnikbh/rbac-in-agentic-systems-why-the-old-model-breaks-and-what-to-do-instead-ed80a6d65b16",
       dates: "Mar 2026",
-      active: true,
       description:
         "RBAC was designed for humans. As AI systems grow more agentic, the old model starts to crack in ways most teams don't anticipate — and what to do instead.",
       technologies: ["Agentic AI", "Security", "RBAC", "Access Control", "System Design"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/rbac-in-agentic-systems-why-the-old-model-breaks-and-what-to-do-instead-ed80a6d65b16",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-4.svg",
-      video: "",
     },
     {
       title: "Decoding A2A & MCP as a PM",
       href: "https://medium.com/@barnikbh/decoding-the-a2a-mcp-language-as-a-pm-88ebb0a314b4",
       dates: "Aug 2025",
-      active: true,
       description:
         "A Product Manager's guide to understanding the Agent-to-Agent and Model Context Protocol standards — what they mean, why they matter, and how to think about them.",
       technologies: ["MCP", "A2A", "Agentic AI", "Product Management", "AI Standards"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/decoding-the-a2a-mcp-language-as-a-pm-88ebb0a314b4",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-5.svg",
-      video: "",
     },
     {
       title: "MCP for Product People",
       href: "https://medium.com/@barnikbh/model-context-protocol-mcp-for-product-people-c1e4f6dca222",
       dates: "Apr 2025",
-      active: true,
       description:
         "Model Context Protocol demystified for product managers — what it is, how it works, and why it's becoming the connective tissue of the agentic AI ecosystem.",
       technologies: ["MCP", "LLM", "Product Management", "AI Ecosystem"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/model-context-protocol-mcp-for-product-people-c1e4f6dca222",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-6.svg",
-      video: "",
     },
     {
       title: "Developing a Product Security Strategy",
       href: "https://medium.com/@barnikbh/developing-a-strategy-for-product-security-085da2f445c2",
       dates: "Mar 2025",
-      active: true,
       description:
         "A practical framework for building product security into a B2B SaaS product — from threat modelling to auth, encryption, and compliance.",
       technologies: ["Security", "Product Strategy", "B2B SaaS", "Compliance", "Auth"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/developing-a-strategy-for-product-security-085da2f445c2",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-7.svg",
-      video: "",
     },
     {
       title: "Balancing Speed & Quality in Semantic Search",
       href: "https://medium.com/@barnikbh/from-quick-fixes-to-long-term-success-balancing-speed-and-quality-in-semantic-search-6cdea1f9583f",
       dates: "Mar 2025",
-      active: true,
       description:
         "How we recovered semantic search accuracy from 6th place to industry-leading — covering triage quick fixes and a long-term architectural redesign.",
       technologies: ["Semantic Search", "MLOps", "NLP", "MTEB", "Search Ranking"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/from-quick-fixes-to-long-term-success-balancing-speed-and-quality-in-semantic-search-6cdea1f9583f",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-8.svg",
-      video: "",
     },
     {
       title: "Building RAG from the Ground Up",
       href: "https://medium.com/@barnikbh/building-rag-from-the-ground-up-a-journey-from-high-costs-to-high-impact-beebca58248b",
       dates: "Mar 2025",
-      active: true,
       description:
         "A journey from high costs to high impact — how we built a Retrieval-Augmented Generation system from scratch and what we learned along the way.",
       technologies: ["RAG", "LLM", "Vector Database", "AI Engineering", "Cost Optimisation"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/building-rag-from-the-ground-up-a-journey-from-high-costs-to-high-impact-beebca58248b",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-9.svg",
-      video: "",
     },
     {
       title: "Building AI Labs: STT Model MLOps",
       href: "https://medium.com/@barnikbh/building-ai-labs-balancing-innovation-and-reliability-in-stt-model-mlops-02461e245812",
       dates: "Mar 2025",
-      active: true,
       description:
         "How we built an internal AI Labs environment to safely test new STT models in production — balancing innovation and reliability through parallel testing.",
       technologies: ["MLOps", "Speech-to-Text", "A/B Testing", "AI Infrastructure", "Reliability"],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/building-ai-labs-balancing-innovation-and-reliability-in-stt-model-mlops-02461e245812",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
       image: "/blog-10.svg",
-      video: "",
     },
+  ],
+  projects: [
     {
       title: "No-Code AI Workflow Agents",
       href: "https://medium.com/@barnikbh/building-no-code-ai-workflow-agents-from-experiment-to-scalable-product-901e1d2bba39",
       dates: "Apr 2024 - Jan 2025",
       active: true,
       description:
-        "We designed a three-party-architecture that could balance flexibility, scalability and control.",
-      technologies: [
-        "CCaaS",
-        "LLM",
-        "System Design",
-        "No Code AI",
-        "AI Workflow",
-        "AI Agent",
-      ],
+        "We designed a three-party architecture that could balance flexibility, scalability, and control for no-code AI workflow agents.",
+      technologies: ["CCaaS", "LLM", "System Design", "No Code AI", "AI Workflow", "AI Agent"],
       links: [
         {
           type: "Read Blog",
@@ -441,8 +365,25 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: 
-        "/blog-1.webp",
+      image: "/blog-1.webp",
+      video: "",
+    },
+    {
+      title: "Building Voice Gateway Infrastructure",
+      href: "https://medium.com/@barnikbh/from-six-seconds-to-seamless-how-we-rebuilt-our-ai-voice-agent-from-the-ground-up-b3b3ca275102",
+      dates: "Apr 2024 - Jan 2025",
+      active: true,
+      description:
+        "How we reduced voice agent latency from 6 seconds to 400ms by building our own in-house Voice Gateway infrastructure.",
+      technologies: ["CCaaS", "Speech-to-Text", "Text-to-Speech", "VoIP", "WebRTC", "System Design"],
+      links: [
+        {
+          type: "Read Blog",
+          href: "https://medium.com/@barnikbh/from-six-seconds-to-seamless-how-we-rebuilt-our-ai-voice-agent-from-the-ground-up-b3b3ca275102",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/blog-2.webp",
       video: "",
     },
     {
@@ -467,33 +408,6 @@ export const DATA = {
       ],
       image: 
         "/okta.png",
-      video: "",
-    },
-    {
-      title: "Building Voice Gateway Infrastructure",
-      href: "https://medium.com/@barnikbh/from-six-seconds-to-seamless-how-we-rebuilt-our-ai-voice-agent-from-the-ground-up-b3b3ca275102",
-      dates: "Apr 2024 - Jan 2025",
-      active: true,
-      description:
-        "We took matters into our own hand to reduce latency from 6 seconds to 400 miliseconds. We built our own in-house Voice Gateway infrastructure",
-      technologies: [
-        "CCaaS",
-        "Speech-to-text",
-        "Text-to-speech",
-        "System Design",
-        "Orchestrator",
-        "VoIP",
-        "WebRTC",
-      ],
-      links: [
-        {
-          type: "Read Blog",
-          href: "https://medium.com/@barnikbh/from-six-seconds-to-seamless-how-we-rebuilt-our-ai-voice-agent-from-the-ground-up-b3b3ca275102",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: 
-        "/blog-2.webp",
       video: "",
     },
     {

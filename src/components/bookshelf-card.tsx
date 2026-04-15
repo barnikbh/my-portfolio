@@ -10,11 +10,11 @@ type Book = {
 };
 
 type Props = {
-  currentBook: string;
   books: readonly Book[];
 };
 
-export function BookshelfCard({ currentBook, books }: Props) {
+export function BookshelfCard({ books }: Props) {
+  const currentBook = books[0] ? `${books[0].title} — ${books[0].author}` : "Nothing yet";
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
