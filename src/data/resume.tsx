@@ -193,7 +193,7 @@ export const DATA = {
       start: "May 2025",
       end: "August 2025",
       description:
-        "Advising the engineering team on building a platform product strategy, and helping founders with driving go-to-market, pricing, and architecture conversations with customers.",  
+        "Advised the engineering team on building a platform product strategy, and helped founders drive go-to-market, pricing, and architecture conversations with customers.",  
     },
     {
       company: "Fundamento",
