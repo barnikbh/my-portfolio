@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="4" fill="#ef4444"/>
+  <rect x="60" y="60" width="1080" height="510" rx="12" fill="none" stroke="#ffffff08"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff05" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff05" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff05" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#ffffff05" stroke-width="1"/>
+  <rect x="80" y="200" width="170" height="36" rx="6" fill="#ef444420"/>
+  <text x="165" y="224" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="600" fill="#ef4444" text-anchor="middle" letter-spacing="2">SECURITY</text>
+  <text x="80" y="310" font-family="'Inter', system-ui, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Product Security</text>
+  <text x="80" y="370" font-family="'Inter', system-ui, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Strategy</text>
+  <circle cx="1100" cy="500" r="120" fill="#ef444408"/>
+  <circle cx="1100" cy="500" r="70" fill="#ef44440d"/>
+</svg>
