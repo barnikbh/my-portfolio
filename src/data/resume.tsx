@@ -181,7 +181,7 @@ export const DATA = {
       start: "August 2025",
       end: "Present",
       description:
-        "Leading AI product strategy across DEX, UEM & Horizon — building autonomous workspace experiences that reduce IT operational overhead through intelligent automation and proactive remediation.",
+        "Leading platform AI strategy across DEX, UEM & Horizon in partnership with data science and engineering. Own Insights and guided Root Cause Analysis features — and a broader portfolio of platform AI capabilities — working towards Omnissa's vision of a self-configuring, self-healing, and self-securing digital workplace. Building AI for IT Admins who manage and secure the modern enterprise endpoint.",
     },
     {
       company: "LiaPlus AI",
