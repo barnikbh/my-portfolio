@@ -3,6 +3,7 @@ import { SectionHeader } from "@/components/section-header";
 import { FinanceDemoModal } from "@/components/finance-demo-modal";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import Image from "next/image";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -20,8 +21,12 @@ export function SideProjectsSection() {
           <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 14 + id * 0.05}>
             <div className="flex items-center justify-between p-4 rounded-xl border hover:bg-muted/50 transition-colors gap-4">
               <div className="flex items-center gap-3 min-w-0">
-                <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-lg flex-shrink-0">
-                  {project.icon}
+                <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-lg flex-shrink-0 overflow-hidden">
+                  {typeof project.icon === "string" && project.icon.startsWith("/") ? (
+                    <Image src={project.icon} alt={project.title} width={36} height={36} className="w-full h-full object-cover rounded-lg" />
+                  ) : (
+                    project.icon
+                  )}
                 </div>
                 <div className="min-w-0">
                   <div className="text-sm font-semibold truncate">{project.title}</div>
@@ -34,9 +39,9 @@ export function SideProjectsSection() {
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">
                     Coming soon
                   </span>
-                ) : project.href ? (
+                ) : "href" in project && project.href ? (
                   <Link
-                    href={project.href}
+                    href={project.href as string}
                     target="_blank"
                     className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   >

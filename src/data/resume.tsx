@@ -102,16 +102,15 @@ export const DATA = {
     {
       title: "Finance Dashboard",
       description: "Personal finance tracker with AES encryption, hosted on Fly.io",
-      href: "https://accounts.barnikbh.com",
       icon: "💰",
       status: "live" as "live" | "coming-soon",
       hasDemo: true,
     },
     {
-      title: "Indian Tax Filing Simplified",
+      title: "Plan My Tax",
       description: "Tax savings made easy, intuitive, and free — for anyone, anywhere",
       href: "https://planmytax.org",
-      icon: "🧾",
+      icon: "/planmytax-logo.png",
       status: "live" as const,
       hasDemo: false,
     },
