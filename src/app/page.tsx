@@ -12,8 +12,7 @@ import { HackathonsSection } from "@/components/sections/hackathons-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
-
-const BLUR_FADE_DELAY = 0.04;
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export default function Page() {
   return (

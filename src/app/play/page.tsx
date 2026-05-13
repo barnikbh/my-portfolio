@@ -3,13 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Play",
   description: "PADI Advanced Open Water diver. This is my dive log.",
 };
-
-const BLUR_FADE_DELAY = 0.04;
 
 const stats = [
   { label: "Total dives", value: "16" },

@@ -12,7 +12,8 @@ Personal portfolio website for [Barnik Bhattacharyya](https://barnikbh.com), bui
 - Sitemap, robots.txt, and JSON-LD schema for SEO
 - Reading time estimate on all posts
 - Dark / light mode toggle
-- Vercel Analytics
+- Vercel Analytics + Speed Insights
+- Analytics dashboard at `/admin` — password-protected, Redis-backed page view tracking
 - Responsive, mobile-first layout
 
 ## Stack
@@ -22,7 +23,8 @@ Personal portfolio website for [Barnik Bhattacharyya](https://barnikbh.com), bui
 - [TailwindCSS](https://tailwindcss.com/) + [Shadcn/UI](https://ui.shadcn.com/)
 - [Framer Motion](https://www.framer.com/motion/) + [Magic UI](https://magicui.design/)
 - [Resend](https://resend.com/) — contact form email delivery
-- [Vercel](https://vercel.com/) — hosting and analytics
+- [Upstash Redis](https://upstash.com/) — page view analytics
+- [Vercel](https://vercel.com/) — hosting, Analytics, and Speed Insights
 
 ## Getting Started
 
@@ -45,9 +47,14 @@ Create a `.env.local` file in the root:
 
 ```bash
 RESEND_API_KEY=re_your_api_key_here
+UPSTASH_REDIS_REST_URL=https://your-db.upstash.io
+UPSTASH_REDIS_REST_TOKEN=your_token_here
+ADMIN_PASSWORD=your_admin_password_here
 ```
 
-Get a free API key at [resend.com](https://resend.com).
+- `RESEND_API_KEY` — free at [resend.com](https://resend.com)
+- `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` — free at [upstash.com](https://upstash.com)
+- `ADMIN_PASSWORD` — any password; protects the `/admin` analytics dashboard
 
 ### 4. Start the dev server
 

@@ -1,13 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
+import crypto from "crypto";
 import { redis, dayKey } from "@/lib/redis";
+
+function sessionToken(): string {
+  return crypto
+    .createHmac("sha256", process.env.ADMIN_PASSWORD!)
+    .update("portfolio:admin:v1")
+    .digest("hex");
+}
 
 export async function GET(req: NextRequest) {
   const session = req.cookies.get("admin_session")?.value;
-  if (!session || session !== process.env.ADMIN_PASSWORD) {
+  if (!session || session !== sessionToken()) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  // Build last 14 days
   const days: Date[] = Array.from({ length: 14 }, (_, i) => {
     const d = new Date();
     d.setDate(d.getDate() - (13 - i));
@@ -26,7 +33,6 @@ export async function GET(req: NextRequest) {
 
   const today = daily[daily.length - 1].count;
 
-  // Top pages: scan pv:page:* keys
   let cursor = 0;
   const pageKeys: string[] = [];
   do {
@@ -43,14 +49,9 @@ export async function GET(req: NextRequest) {
     : [];
 
   const topPages = pageKeys
-    .map((k, i) => ({ path: k.replace("pv:page", ""), count: pageCounts[i] ?? 0 }))
+    .map((k, i) => ({ path: k.replace("pv:page:", ""), count: pageCounts[i] ?? 0 }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 10);
 
-  return NextResponse.json({
-    total: total ?? 0,
-    today,
-    daily,
-    topPages,
-  });
+  return NextResponse.json({ total: total ?? 0, today, daily, topPages });
 }

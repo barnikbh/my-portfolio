@@ -1,8 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import ContactForm from "@/components/contact-form";
 import { SectionHeader } from "@/components/section-header";
-
-const BLUR_FADE_DELAY = 0.04;
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export function ContactSection() {
   return (

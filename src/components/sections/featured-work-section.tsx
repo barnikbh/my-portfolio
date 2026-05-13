@@ -2,8 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeader } from "@/components/section-header";
 import { DATA } from "@/data/resume";
-
-const BLUR_FADE_DELAY = 0.04;
+import { BLUR_FADE_DELAY } from "@/lib/constants";
 
 export function FeaturedWorkSection() {
   return (

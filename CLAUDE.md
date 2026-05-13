@@ -28,8 +28,8 @@ src/
 │   ├── admin/page.tsx            — analytics dashboard (password protected)
 │   └── api/
 │       ├── track/route.ts        — POST: increments Redis visit counters
-│       ├── admin-stats/route.ts  — GET: returns stats (cookie-auth)
-│       └── admin-login/route.ts  — POST: sets session cookie
+│       ├── admin-stats/route.ts  — GET: returns stats (HMAC cookie-auth)
+│       └── admin-login/route.ts  — POST: validates password, sets HMAC session cookie; rate-limited 5/IP/10 min
 ├── components/
 │   ├── section-header.tsx        — shared centered section header
 │   ├── blogs-section.tsx         — Writing section, expand/collapse
@@ -39,14 +39,22 @@ src/
 │       ├── side-projects-section.tsx
 │       ├── hackathons-section.tsx
 │       └── contact-section.tsx
-├── data/resume.tsx               — ALL content lives here
-└── lib/redis.ts                  — Upstash Redis client + key helpers
+├── data/
+│   ├── resume.tsx                — ALL content lives here
+│   ├── blog.ts                   — re-exports getPost + getBlogPosts from lib/mdx
+│   └── work.ts                   — re-exports getWork + getWorkPosts from lib/mdx
+└── lib/
+    ├── constants.ts              — shared BLUR_FADE_DELAY
+    ├── mdx.ts                    — shared MDX parsing: getPost, getAllPosts, markdownToHTML
+    └── redis.ts                  — Upstash Redis client + key helpers
 ```
 
 ## Analytics (/admin)
 - Backed by **Upstash Redis** (free tier, Singapore, DB: `portfolio`)
 - Tracks: total visits, daily visits (90-day TTL), per-page counts
 - Dashboard at `/admin` — password login → bar chart + top pages
+- Session cookie is an HMAC-SHA256 token derived from `ADMIN_PASSWORD` — password never stored in the cookie
+- Login is rate-limited: 5 attempts per IP per 10 minutes (Redis-backed)
 
 ## Required env vars (set in Vercel + .env.local)
 | Key | Purpose |
