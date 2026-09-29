@@ -75,7 +75,7 @@ export function BlogsSection({ blogs, blurDelay }: BlogsSectionProps) {
               <CardFooter className="px-2 pb-2">
                 <Link href={blog.href} target="_blank">
                   <Badge className="flex gap-2 px-2 py-1 text-[10px]">
-                    Read on Medium →
+                    {blog.href.includes("medium.com") ? "Read on Medium →" : "Read the article →"}
                   </Badge>
                 </Link>
               </CardFooter>

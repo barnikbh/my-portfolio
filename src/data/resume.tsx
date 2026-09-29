@@ -250,6 +250,15 @@ export const DATA = {
   ],
   blogs: [
     {
+      title: "Self-Configuring, Self-Healing, Self-Securing: The Next Era of End User Computing",
+      href: "https://community.omnissa.com/technical-blog/self-configuring-self-healing-self-securing-the-next-era-of-end-user-computing-r244/",
+      dates: "Sep 2026",
+      description:
+        "Why the model isn't the product — the AI harness is. A framework for the tools, memory, and agentic loop enterprise IT needs to build endpoints that configure, heal, and secure themselves.",
+      technologies: ["Agentic AI", "End User Computing", "AI Harness", "MCP", "IT Automation"],
+      image: "/blog-11.svg",
+    },
+    {
       title: "Observability in Agentic Systems",
       href: "https://medium.com/@barnikbh/observability-in-agentic-systems-you-dont-know-what-your-agents-are-doing-c253cf31d94a",
       dates: "Apr 2026",
