@@ -452,7 +452,7 @@ export const DATA = {
       location: "Remote · Cerebral Valley",
       description:
         "Building Brahma, a clinical decision graph for doctors: it walks a patient case through a cited medical knowledge graph and shows only answers that trace back to a source. Decision support, not diagnosis.",
-      image: "/brahma.svg",
+      image: "/meta.svg",
       links: [
         {
           title: "Source",
