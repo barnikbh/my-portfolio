@@ -447,6 +447,26 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Meta Global AI Developer Hackathon",
+      dates: "November 2026",
+      location: "Remote · Cerebral Valley",
+      description:
+        "Building Brahma, a clinical decision graph for doctors: it walks a patient case through a cited medical knowledge graph and shows only answers that trace back to a source. Decision support, not diagnosis.",
+      image: "/brahma.svg",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/barnikbh/brahma",
+        },
+        {
+          title: "Event",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://cerebralvalley.ai/events",
+        },
+      ],
+    },
+    {
       title: "Deloitte Hackathon - Winner",
       dates: "April 2018",
       location: "Hyderabad, India",
