@@ -486,12 +486,7 @@ export const DATA = {
       icon: "public",
       image:
         "/crichum.jpg",
-      links: [
-        {
-        title: "Website",
-        icon: <Icons.globe className="h-4 w-4" />,
-        href: "https://crichum.com/",
-      },],
+      links: [],
     },
     {
       title: "Accenture Hackathon - Runner Up",
