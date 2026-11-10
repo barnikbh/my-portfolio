@@ -451,7 +451,7 @@ export const DATA = {
       dates: "November 2026",
       location: "Remote · Cerebral Valley",
       description:
-        "Building Brahma, a clinical decision graph for doctors: it walks a patient case through a cited medical knowledge graph and shows only answers that trace back to a source. Decision support, not diagnosis.",
+        "Built Brahma, a clinical decision graph for doctors. It walks a synthetic patient case through a cited medical knowledge graph, shows only answers that trace back to a source, and lets clinicians update the graph from a source URL with reviewer sign-off. It runs on Meta's Muse Spark model. Decision support, not diagnosis.",
       image: "/meta.svg",
       links: [
         {
